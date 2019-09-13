@@ -10,10 +10,11 @@ use Furbo\Renderer\PdfRenderer;
 use Furbo\Renderer\RendererExption;
 
 try {
-    $url = 'https://furbo.ch/furbo-integriert-die-unterschiedlichesten-tools';
+
+    $url = 'https://furbo.ch/support';
     $renderer = new PdfRenderer();
     $renderer->setApiKey(123);
-    $pdf = $renderer->render($url, 'exampels/tmp/'.date(time()).'.pdf');
+    $pdf = $renderer->render($url, 'exampels/tmp/'.date(time()).'.pdf', ['orientation' => 'landscape']);
 
     /*
     $pdf = $renderer->render($url);
