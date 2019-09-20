@@ -1,6 +1,7 @@
 {
     "name": "furbo/renderer",
     "type": "library",
+    "version": "1.0.0",
     "description": "",
     "keywords": [
         "SPA",
