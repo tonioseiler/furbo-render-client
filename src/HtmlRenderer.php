@@ -18,7 +18,7 @@ class HtmlRenderer extends Renderer
                 ]
             ]);
             $data = json_decode((string) $response->getBody());
-            if ($data->error) {
+            if (isset($data->error) && !empty($data->error)) {
                 throw new RendererExption($data->message, $data->error);
             }
             return $data->content;

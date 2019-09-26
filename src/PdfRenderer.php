@@ -27,7 +27,7 @@ class PdfRenderer extends Renderer
                 'form_params' => $params
             ]);
             $data = json_decode((string) $response->getBody());
-            if ($data->error) {
+            if (isset($data->error) && !empty($data->error)) {
                 throw new RendererExption($data->message, $data->error);
             }
 

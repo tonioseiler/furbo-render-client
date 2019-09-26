@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 abstract class Renderer
 {
 
-    const API_URL = 'http://localhost:8000/api/v1.0';
+    const API_URL = 'https://render.furbo.ch/api/v1.0';
 
     protected $apiKey;
     protected $client;
