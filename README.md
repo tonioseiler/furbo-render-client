@@ -14,7 +14,7 @@ This Library requires PHP 7.2 or higher.
 Can be installed over composer.
 
 ```
-composer reuire furbo/renderer
+composer require furbo/renderer
 ```
 
 ## Furbo Renderer Overview
