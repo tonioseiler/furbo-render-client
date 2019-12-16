@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Furbo\Renderer\PdfRenderer;
-use Furbo\Renderer\RendererExption;
+use Furbo\Renderer\RendererException;
 
 try {
 
@@ -22,6 +22,6 @@ try {
     $pdf = $renderer->render($url, 'test.pdf', ['orientation' => 'landscape', 'format' => 'Letter']);
     */
 
-} catch (RendererExption $e) {
+} catch (RendererException $e) {
     echo $e->getMessage();
 }

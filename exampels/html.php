@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Furbo\Renderer\HtmlRenderer;
-use Furbo\Renderer\RendererExption;
+use Furbo\Renderer\RendererException;
 
 try {
     $url = 'https://furbo.ch/furbo-integriert-die-unterschiedlichesten-tools';
@@ -15,6 +15,6 @@ try {
     $renderer->setApiKey(123);
     $html = $renderer->render($url);
     echo $html;
-} catch (RendererExption $e) {
+} catch (RendererException $e) {
     echo $e->getMessage();
 }

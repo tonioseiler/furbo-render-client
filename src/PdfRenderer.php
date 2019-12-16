@@ -28,7 +28,7 @@ class PdfRenderer extends Renderer
             ]);
             $data = json_decode((string) $response->getBody());
             if (isset($data->error) && !empty($data->error)) {
-                throw new RendererExption($data->message, $data->error);
+                throw new RendererException($data->message, $data->error);
             }
 
             $pdfUrl = $data->pdf;
@@ -45,7 +45,7 @@ class PdfRenderer extends Renderer
             }
         } catch (\GuzzleHttp\Exception\ClientException $e) {
             $responseBody = $e->getResponse()->getBody(true);
-            throw new RendererExption('Could not render '.$url.' - '.$responseBody);
+            throw new RendererException('Could not render '.$url.' - '.$responseBody);
         }
 
     }
