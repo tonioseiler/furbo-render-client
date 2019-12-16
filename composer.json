@@ -2,7 +2,7 @@
     "name": "furbo/renderer",
     "type": "library",
     "version": "1.0.0",
-    "description": "Server side rendering of website requests. Rendered output includes content loaded asynchronously over javascript, regardless of the technology used (like react, vue or similar). Can be used to prerender single page applications for good search engine indexing or to generate pgs from URL's.",
+    "description": "Server side rendering of website requests. Rendered output includes content loaded asynchronously over javascript, regardless of the technology used (like react, vue or similar). Can be used to prerender single page applications for good search engine indexing or to generate PDF or Images (PNG) from URL's.",
     "keywords": [
         "SPA",
         "Server Side Rendering",
